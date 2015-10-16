@@ -14,6 +14,8 @@ eJabberd module - sends an API request to `Prowl` when defined user is offline. 
 
 `./build.sh`
 
+* copy `ebin/mod_prowl_ng.beam` to eJabberd ebin directory
+
 # Configuration
 
 modules secrtion ejabberd.yml
