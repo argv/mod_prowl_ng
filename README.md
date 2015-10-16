@@ -11,7 +11,8 @@ eJabberd module - sends an API request to `Prowl` when defined user is offline. 
 
 * modify "build.sh" ebin directory
 * modify "Emakefile" header directory
-$ ./build.sh
+
+`./build.sh`
 
 # Configuration
 
