@@ -18,7 +18,7 @@ eJabberd module - sends an API request to `Prowl` when defined user is offline. 
 
 # Configuration
 
-modules secrtion ejabberd.yml
+modules section ejabberd.yml
 
     mod_prowl_ng:
       ## "JID": "Prowl API key"
