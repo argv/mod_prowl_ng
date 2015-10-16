@@ -17,7 +17,7 @@ eJabberd module - sends an API request to `Prowl` when defined user is offline. 
 # Configuration
 
 * modules secrtion ejabberd.yml
-  mod_prowl_ng:
-    ## "JID": "Prowl API key"
-    "eris@xmpp.local":  "1143ffe24542c23c42c5c25f509e211ef17f0e0f"
-    "fletz@xmpp.local": "2226ae94105d0c4ae191ed8b8a8e447cd77e9f9e"
+      mod_prowl_ng:
+        ## "JID": "Prowl API key"
+        "eris@xmpp.local":  "1143ffe24542c23c42c5c25f509e211ef17f0e0f"
+        "fletz@xmpp.local": "2226ae94105d0c4ae191ed8b8a8e447cd77e9f9e"
