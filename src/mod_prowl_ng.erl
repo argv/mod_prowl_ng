@@ -21,10 +21,6 @@
 -export([start/2,
  init/2,
  stop/1,
- type/1,
- destination/1,
- source/1,
- event/1,
  key/1,
  match/3,
  uri/3,
@@ -57,18 +53,6 @@ stop(Host) ->
   ok.
 
 %% Data
-type(Packet) ->
-  xml:get_tag_attr_s(<<"type">>, Packet).
-
-destination(To) ->
-  [To#jid.luser, "@", To#jid.lserver].
-
-source(From) ->
-  [From#jid.luser, "@", From#jid.lserver].
-
-event(Packet) ->
-  xml:get_path_s(Packet, [{elem, <<"body">>}, cdata]).
-
 data(Source, Entry) ->
   case Entry of
     "Type"        -> xml:get_tag_attr_s(<<"type">>, Source);
@@ -94,7 +78,7 @@ match(From, To, Packet) ->
 
 %% URI
 uri(From, To, Packet) ->
-  _event = event(Packet),
+  _event = data(Packet, "Event"),
   [ "apikey=", key(To), "&",
   "application=XMPP", "&",
   "event=New%20Event", "&",
